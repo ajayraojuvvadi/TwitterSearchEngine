@@ -16,10 +16,10 @@ def extract_emojis(str):
 
 
 # Variables that contains the user credentials to access Twitter API 
-ACCESS_TOKEN = ''
-ACCESS_SECRET = ''
-CONSUMER_KEY = ''
-CONSUMER_SECRET = ''
+ACCESS_TOKEN = '1561147297-7mmGav3x1BPRS1mCRrwL35q05CTLxRvoqEBROpu'
+ACCESS_SECRET = '2RtWuH5YJizW3lq7OMFJhRrCRy4v2Z1w6cqKVTeZqTKrP'
+CONSUMER_KEY = 'MV3ryasJHGRK4zOEy6Nz0BuuA'
+CONSUMER_SECRET = 'vG1haOPiP36Sn6F2axNyoF9Aawi2zaeIbWPgqhR5QCQXlkqBGo'
 
 auth = OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
 auth.set_access_token(ACCESS_TOKEN, ACCESS_SECRET)
@@ -28,7 +28,7 @@ country_count = {'usa': 0, 'india': 0, 'brazil': 0}  # 10,000 per category
 lang_count = {'en': 0, 'es': 0, 'hi': 0}
 topic_count = {
     'environment': 0,
-    'crime': 0,
+    'covid': 0,
     'politics': 0,
     'social unrest': 0,
     'infra': 0
@@ -162,7 +162,7 @@ def tweet_search(api, query, max_tweets, max_id, since_id, geocode='NULL'):
             count_list = [country_count, topic_count, lang_count, country_count_geo, date_count]
 
             # Storing stats in a seperate file
-            F = open('C:\\Users\\akula\\Documents\\IR\\tweetCrawler\\' + 'stats.txt', 'w')
+            F = open('C:\\Users\\Ajayr\\Documents\\IR\\tweetCrawler\\' + 'stats.txt', 'w')
 
             for c in count_list:
                 for i, j in c.items():
@@ -255,7 +255,7 @@ def main():
         # print(topic,':',query)
 
         ''' other variables '''
-        json_file_root = 'C:\\Users\\akula\\Documents\\IR\\tweetCrawler\\'
+        json_file_root = 'C:\\Users\\Ajayr\\Documents\\IR\\tweetCrawler\\'
         os.makedirs(os.path.dirname(json_file_root), exist_ok=True)
         read_IDs = False
 
@@ -325,13 +325,13 @@ def main():
                     if topic == list(search_phrases.keys())[-1]:
 
                         f. = open(
-                            'C:\\Users\\akula\\Documents\\IR\\tweetCrawler\\' + 'tweet_lookup.txt',
+                            'C:\\Users\\Ajayr\\Documents\\IR\\tweetCrawler\\' + 'tweet_lookup.txt',
                             'w')
                         for tweet in tweet_lookup:
                             f.write(tweet)  # .encode('unicode-escape')
                         f.close()
 
-                        F = open('C:\\Users\\akula\\Documents\\IR\\tweetCrawler\\' + 'stats.txt',
+                        F = open('C:\\Users\\Ajayr\\Documents\\IR\\tweetCrawler\\' + 'stats.txt',
                                  'w')
 
                         for c in count_list:

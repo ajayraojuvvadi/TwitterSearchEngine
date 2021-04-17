@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Created on Wed Sep 11 23:16:11 2019
-
-@author: akula
+@author: Ajayr
 """
 
 from typing import List, Any, Union

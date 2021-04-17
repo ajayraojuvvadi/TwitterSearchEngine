@@ -27,7 +27,7 @@ new_tweets = api.search(q=query, count=100,
                         tweet_mode='extended')
 
 c = 0
-with open('C:\\Users\\akula\\Documents\\IR\\temp.json', 'w') as f:  # ,encoding='utf16') as f:
+with open('C:\\Users\\Ajayr\\Documents\\IR\\temp.json', 'w') as f:  # ,encoding='utf16') as f:
     f.write('[')
     for tweet in new_tweets:
         tweet_clean = re.sub(r"http\S+", '', str(tweet.full_text))  # to remove URLs
