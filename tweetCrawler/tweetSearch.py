@@ -16,10 +16,10 @@ def extract_emojis(str):
 
 
 # Variables that contains the user credentials to access Twitter API 
-ACCESS_TOKEN = '1561147297-7mmGav3x1BPRS1mCRrwL35q05CTLxRvoqEBROpu'
-ACCESS_SECRET = '2RtWuH5YJizW3lq7OMFJhRrCRy4v2Z1w6cqKVTeZqTKrP'
-CONSUMER_KEY = 'MV3ryasJHGRK4zOEy6Nz0BuuA'
-CONSUMER_SECRET = 'vG1haOPiP36Sn6F2axNyoF9Aawi2zaeIbWPgqhR5QCQXlkqBGo'
+ACCESS_TOKEN = ''
+ACCESS_SECRET = ''
+CONSUMER_KEY = ''
+CONSUMER_SECRET = ''
 
 auth = OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
 auth.set_access_token(ACCESS_TOKEN, ACCESS_SECRET)
